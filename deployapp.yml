@@ -1,0 +1,9 @@
+---
+- hosts: tomcatServer
+  vars:
+  - warName: myapp.war
+  - warRemotePath: /do/warfiles
+
+  - name: backup war
+    shell: "cp /root/.jenkins/jobs/cicid_poc/workspace/dist/testapp.war /do/apache-tomcat-9.0.56/webapps/"
+
