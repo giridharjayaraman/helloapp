@@ -3,12 +3,13 @@
   vars:
   - warName: myapp.war
   - warRemotePath: /do/warfiles
-  
+
+  tasks:
   - name: remove war
     shell: "rm -rf /do/apache-tomcat-9.0.56/webapps/testapp.war"
-	
+    
   - name: remove exploded dir
-    shell: "rm -rf /do/apache-tomcat-9.0.56/webapps/testapp"	
+    shell: "rm -rf /do/apache-tomcat-9.0.56/webapps/testapp"
 
   - name: deploy war
     shell: "cp /root/.jenkins/jobs/cicid_poc/workspace/dist/testapp.war /do/apache-tomcat-9.0.56/webapps/"
